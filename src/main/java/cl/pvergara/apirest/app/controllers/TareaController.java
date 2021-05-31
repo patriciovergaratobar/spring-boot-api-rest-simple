@@ -1,5 +1,6 @@
 package cl.pvergara.apirest.app.controllers;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -38,7 +39,7 @@ public class TareaController {
     	final Tarea tarea = tareaService.create(data);
     	final ResultadoGenerico<Tarea> resultado = new ResultadoGenerico<Tarea>();
     	if (tarea == null) {
-    		
+
     		resultado.setEstado(Boolean.FALSE);
         	resultado.setMsg("Ya existe un registro con el mismo ID.");
         	resultado.setData(null);
